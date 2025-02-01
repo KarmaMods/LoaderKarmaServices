@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOADERS KarmaServices</title>
+    <title>Unbranded Loaders</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap');
 
         body {
             margin: 0;
             font-family: "Tomorrow", sans-serif;
-            font-weight: 700;
             background: linear-gradient(85deg, #1F1F1F, #141414, #1C1C1C);
             background-size: 200% 200%;
             animation: gradientBackground 15s ease infinite;
@@ -30,16 +29,14 @@
         }
 
         h1 {
-            font-family: "Tomorrow", sans-serif;
-            position: relative;
-            display: inline-block;
-            color: #b700ff;
             font-size: 3rem;
+            color: #b700ff;
             border-right: 0.15em solid #b700ff;
             animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
             margin: 0 auto;
             white-space: nowrap;
             overflow: hidden;
+            display: inline-block;
         }
 
         @keyframes typing {
@@ -48,8 +45,7 @@
         }
 
         @keyframes blink-caret {
-            0%, 100% { border-color: transparent; }
-            50% { border-color: #b700ff; }
+            50% { border-color: transparent; }
         }
 
         h1.typing-complete {
@@ -59,24 +55,25 @@
         h2 {
             font-size: 2rem;
             margin-top: 30px;
-            margin-bottom: 20px;
         }
 
-        p {
-            margin-bottom: 30px;
-            font-size: 1.2rem;
-            opacity: 0.8;
-            text-shadow: 1px 1px 2px #000000;
+        .category {
+            margin-bottom: 50px;
         }
 
         .button-container {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .button {
-            display: inline-block;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
             padding: 15px;
             font-size: 18px;
             border: 2px solid #b700ff;
@@ -84,25 +81,8 @@
             background-color: #1C1C1C;
             text-decoration: none;
             border-radius: 14px;
-            transition: 0.5s ease;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
             box-shadow: 0px 0px 10px #b700ff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .button::after {
-            content: '';
-            position: absolute;
-            left: -100%;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(146, 0, 255, 0.2), transparent);
-            transition: all 0.5s ease;
-        }
-
-        .button:hover::after {
-            left: 100%;
         }
 
         .button:hover {
@@ -112,101 +92,93 @@
             box-shadow: 0px 8px 25px #b700ff;
         }
 
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
         @keyframes gradientBackground {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.4); opacity: 0.6; }
+        @keyframes blink {
+            50% { opacity: 0.5; }
         }
 
-        .status-container {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-
-        .status-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: #00ff00;
+        .dot-green, .dot-orange {
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            animation: pulse 1.5s infinite alternate;
+            animation: blink 1s infinite alternate;
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-            p { font-size: 1rem; }
+        .dot-green {
+            background-color: #00FF00;
+        }
+
+        .dot-orange {
+            background-color: #FFA500;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 id="title">KarmaServices - LOADERS :</h1>
+        <h1 id="title">Karmaservices Loaders</h1>
 
         <div class="category">
-            <h2>BO6-Warzone ⤵</h2>
+            <h2>MW3/BO6</h2>
             <div class="button-container">
-                <a href="#" class="button">BO6 UNLOCK-ALL</a>
-                <a href="#" class="button">BO6 INTERNAL</a>
-                <a href="#" class="button">BO6 PLATINIUM</a>
-                <a href="#" class="button">BO6 SILENT</a>
-                <a href="#" class="button">BO6 ANTI-SHADOWBAN</a>
-                <a href="#" class="button">BO6 SHADOW-CLEANER</a>
-
-                <div class="status-container">
-                    <a href="#" class="button">BO6 TOOL XP BOT LOBBY</a>
-                    <span class="status-dot"></span>
-                </div>
+                <a href="#" class="button"><span class="dot-green"></span>BO6 UNLOCK-ALL</a>
+                <a href="#" class="button"><span class="dot-green"></span>BO6 INTERNAL</a>
+                <a href="#" class="button"><span class="dot-green"></span>BO6 PLATINIUM</a>
+                <a href="#" class="button"><span class="dot-green"></span>BO6 SILENT</a>
+                <a href="#" class="button"><span class="dot-green"></span>BO6 ANTI-SHADOWBAN</a>
+                <a href="#" class="button"><span class="dot-green"></span>BO6 SHADOW-CLEANER</a>
+                <a href="#" class="button"><span class="dot-orange"></span>MW3/BO6 LOUD CHAIR</a>
+                <a href="#" class="button"><span class="dot-orange"></span>WZ4 AFK BOT</a>
             </div>
         </div>
 
         <div class="category">
-            <h2>VALORANT ⤵</h2>
+            <h2>FIVEM</h2>
             <div class="button-container">
-                <a href="#" class="button">VALORANT EXTERNAL CHAIR</a>
+                <a href="#" class="button"><span class="dot-orange"></span>FIVEM EXTERNAL CHAIR</a>
             </div>
         </div>
 
         <div class="category">
-            <h2>Fortnite ⤵</h2>
+            <h2>FORTNITE</h2>
             <div class="button-container">
-                <a href="#" class="button">Fortnite SPOOFER</a>
-                <a href="#" class="button">Fortnite AIMBOT + ESP</a>
+                <a href="#" class="button"><span class="dot-green"></span>Fortnite EXTERNAL CHAIR</a>
             </div>
         </div>
 
         <div class="category">
-            <h2>FiveM ⤵</h2>
+            <h2>VALORANT</h2>
             <div class="button-container">
-                <a href="#" class="button">FiveM EXECUTOR</a>
-                <a href="#" class="button">FiveM SPOOFER</a>
+                <a href="#" class="button"><span class="dot-green"></span>VALORANT EXTERNAL CHAIR</a>
             </div>
         </div>
 
         <div class="category">
-            <h2>Autres ⤵</h2>
+            <h2>OTHERS</h2>
             <div class="button-container">
-                <a href="#" class="button">PC OPTIMIZER</a>
+                <a href="#" class="button"><span class="dot-orange"></span>PC OPTIMIZER V1</a>
+                <a href="#" class="button"><span class="dot-orange"></span>HWID PERM WOOFER</a>
+                <a href="#" class="button"><span class="dot-orange"></span>FIX WIN 11</a>
+                <p class="click-me">Not opening? <a href="#" class="click-me">Click Me</a></p>
             </div>
         </div>
-
-        <h2 class="click-me">www.Discord.gg/KarmaServices <a href="https://discord.com/invite/KarmaServices" class="click-me">Rejoins-nous (Click ICI) !</a></h2>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.getElementById('title').classList.add('typing-complete');
-            }, 3500);
-        });
-    </script>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const title = document.getElementById('title');
+        setTimeout(() => {
+            title.classList.add('typing-complete');
+        }, 3500);
+    });
+</script>
 </html>
