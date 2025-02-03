@@ -28,16 +28,165 @@
             width: 90%;
         }
 
-        /* Animation effet écriture */
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+        h1 {
+            font-size: 3rem;
+            color: #b700ff;
+            border-right: 0.15em solid #b700ff;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
         }
 
-        @keyframes blink-caret {
-            50% { border-color: transparent; }
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
         }
 
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #b700ff;
+            color: white;
+            background-color: #1C1C1C;
+            text-decoration: none;
+            border-radius: 14px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 0px 10px #b700ff;
+        }
+
+        .button:hover {
+            background-color: #b700ff;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 25px #b700ff;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.5; }
+        }
+
+        .dot-green, .dot-orange, .dot-blue {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: blink 1s infinite alternate;
+        }
+
+        .dot-green {
+            background-color: #00FF00;
+        }
+
+        .dot-orange {
+            background-color: #FFA500;
+        }
+
+        .dot-blue {
+            background-color: #0000FF;
+        }
+
+        /* Style pour aligner le point et le texte avant le signe "=" */
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espacement entre le point et le texte */
+            justify-content: center; /* Centrer les éléments */
+            margin-bottom: 10px; /* Espacement entre les items */
+        }
+
+        .status-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrer la colonne entière */
+        }
+
+        /* Ajouter un carré avec bordure bleue foncée et un effet brillant */
+        .status-box {
+            background-color: transparent; /* Enlève l'intérieur bleu */
+            border-radius: 14px;
+            padding: 6px 15px; /* Réduit l'espace au-dessus de STATUS DES LOADERS */
+            border: 2px solid #003366; /* Bordure bleue foncée */
+            display: inline-flex;
+            flex-direction: column;
+            gap: 8px; /* Réduit l'espacement interne */
+            text-align: center;
+            margin-top: 20px; /* Réduit l'espace entre le titre et le carré */
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.2); /* Ajout d'un effet lumineux subtil */
+            animation: glow 1.5s ease-in-out infinite alternate; /* Effet de brillance sur la bordure */
+        }
+
+        .status-box p {
+            margin: 0;
+            color: #E0E0E0;
+            font-size: 1.2rem;
+        }
+
+        .status-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px; /* Réduit l'espace sous le titre */
+            color: #b700ff;
+        }
+
+        /* Effet de brillance sur la bordure du carré */
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* Centrage du texte et alignement des signes "=" */
+        .status-box p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Correction du positionnement pour les points */
+        .status-item {
+            justify-content: center;
+        }
+
+        /* Modification pour "STATUS DES LOADERS:" très proche du haut */
+        .status-box h2 {
+            margin-top: 0; /* Retirer l'espace au-dessus du titre */
+        }
+
+        /* Alignement de Karmaservices et LOADERS sur deux lignes */
         .title-container {
             display: flex;
             flex-direction: column;
@@ -48,18 +197,17 @@
             font-size: 3rem;
             color: #b700ff;
             border-right: 0.15em solid #b700ff;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+            margin: 0 auto;
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
-            width: 0;
-            animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
         }
 
         .title span {
-            display: block;
+            display: block; /* Met le mot "LOADERS" à la ligne */
             font-size: 2.5rem;
             margin-top: 10px;
-            text-align: center;
         }
 
     </style>
@@ -72,6 +220,77 @@
                 <span>LOADERS</span>
             </h1>
         </div>
+
+        <div class="category">
+            <div class="status-box">
+                <h2>STATUS DES LOADERS:</h2>
+                <div class="status-item">
+                    <span class="dot-green"></span>
+                    <p>= 100% Fonctionnel</p>
+                </div>
+                <div class="status-item">
+                    <span class="dot-orange"></span>
+                    <p>= Update en cours</p>
+                </div>
+                <div class="status-item">
+                    <span class="dot-blue"></span>
+                    <p>= Indispensable avant lancement</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>BO6 - Warzone ⤵</h2>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/UnbrandedUA.rar" class="button"><span class="dot-green"></span>BO6 - UNLOCK-ALL</a>
+                <a href="https://mega.nz/file/fJ1VFCQK#Qvm-Y47RbJpLm9RKJgjTM2FHdbe9YXft_J2x8yT4H9A" class="button"><span class="dot-green"></span>BO6 - INTERNAL</a>
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/UnbrandedCHAIR.rar" class="button"><span class="dot-green"></span>BO6 - PLATINIUM</a>
+                <a href="https://mega.nz/file/nRFT1ZCb#gs5GPbvUz0hhXng9sKEfriF6AdqksSkv7dYbXyX4u6U" class="button"><span class="dot-green"></span>BO6 - SILENT</a>
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/ANTI-SHADOW-PRO.exe" class="button"><span class="dot-green"></span>BO6 - ANTI-SHADOWBAN</a>
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/SHADOW_CLEANER.exe" class="button"><span class="dot-green"></span>BO6 - SHADOW-CLEANER</a>
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/BOT_LOBBY_KARMA.exe" class="button"><span class="dot-green"></span>BO6 - XP BOT LOBBY LOGICIEL</a>
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/KARMA-FIX.exe" class="button"><span class="dot-blue"></span>BO6 - KarmaFIX (CHECK INSTALLATION)</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>FORTNITE ⤵</h2>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/FN-EXTERNAL.exe" class="button"><span class="dot-green"></span>Fortnite - EXTERNAL CHAIR</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>VALORANT ⤵</h2>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/VALO-EXT.exe" class="button"><span class="dot-green"></span>VALORANT - EXTERNAL CHAIR</a>
+            </div>
+        </div>
+
+         <div class="category">
+            <h2>FIVEM ⤵</h2>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/FIVEM_EXTERNAL_CHAIR.exe" class="button"><span class="dot-orange"></span>FIVEM - EXTERNAL CHAIR</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>AUTRES ⤵</h2>
+            <div class="button-container">
+                <a href="" class="button"><span class="dot-orange"></span>PC OPTIMIZER V1</a>
+                <a href="" class="button"><span class="dot-orange"></span>HWID PERM WOOFER</a>
+                <p class="click-me">Ca ne s'ouvre pas? <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.403-windows-x86-installer" class="click-me">APPUIE ICI</a></p>
+                <p class="click-me">Rejoins KarmaServices sur Discord !  <a href="https://discord.com/invite/KarmaServices" class="click-me">APPUIE ICI</a></p>
+            </div>
+        </div>
     </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const title = document.getElementById('title');
+        setTimeout(() => {
+            title.classList.add('typing-complete');
+        }, 3500);
+    });
+</script>
 </html>
