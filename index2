@@ -125,12 +125,47 @@
         .dot-blue {
             background-color: #0000FF;
         }
+
+        /* Style pour aligner le point et le texte avant le signe "=" */
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espacement entre le point et le texte */
+            justify-content: center; /* Centrer les éléments */
+            margin-bottom: 10px; /* Espacement entre les items */
+        }
+
+        .status-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrer la colonne entière */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="title">Karmaservices Loaders</h1>
 
+        <div class="category">
+            <h2>STATUS DES LOADERS:</h2>
+            <div class="status-container">
+                <!-- Alignement correct avec flexbox pour les points avant le texte -->
+                <div class="status-item">
+                    <span class="dot-green"></span>
+                    <p>= 100% Fonctionnel</p>
+                </div>
+                <div class="status-item">
+                    <span class="dot-orange"></span>
+                    <p>= Update en cours</p>
+                </div>
+                <div class="status-item">
+                    <span class="dot-blue"></span>
+                    <p>= Indispensable avant lancement</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Autres catégories et boutons -->
         <div class="category">
             <h2>BO6 - Warzone ⤵</h2>
             <div class="button-container">
@@ -143,8 +178,6 @@
                 <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/BOT_LOBBY_KARMA.exe" class="button"><span class="dot-green"></span>BO6 - XP BOT LOBBY LOGICIEL</a>
                 <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/KARMA-FIX.exe" class="button"><span class="dot-blue"></span>BO6 - KarmaFIX (CHECK INSTALLATION)</a>
             </div>
-</html>
-
         </div>
 
         <div class="category">
