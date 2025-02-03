@@ -125,6 +125,13 @@
         .dot-blue {
             background-color: #0000FF;
         }
+
+        /* Style pour aligner le point et le texte avant le signe "=" */
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espacement entre le point et le texte */
+        }
     </style>
 </head>
 <body>
@@ -134,12 +141,23 @@
         <div class="category">
             <h2>STATUS DES LOADERS:</h2>
             <div class="button-container">
-                <p><span class="dot-green"></span> = 100% Fonctionnel</p>
-                <p><span class="dot-orange"></span> = Update en cours</p>
-                <p><span class="dot-blue"></span> = Indispensable avant lancement</p>
+                <!-- Alignement correct avec flexbox pour les points avant le texte -->
+                <div class="status-item">
+                    <span class="dot-green"></span>
+                    <p>= 100% Fonctionnel</p>
+                </div>
+                <div class="status-item">
+                    <span class="dot-orange"></span>
+                    <p>= Update en cours</p>
+                </div>
+                <div class="status-item">
+                    <span class="dot-blue"></span>
+                    <p>= Indispensable avant lancement</p>
+                </div>
             </div>
         </div>
 
+        <!-- Autres catégories et boutons -->
         <div class="category">
             <h2>BO6 - Warzone ⤵</h2>
             <div class="button-container">
