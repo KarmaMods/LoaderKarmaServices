@@ -57,56 +57,6 @@
             margin-top: 30px;
         }
 
-        .category {
-            margin-bottom: 50px;
-        }
-
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .button {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
-            padding: 15px;
-            font-size: 18px;
-            border: 2px solid #b700ff;
-            color: white;
-            background-color: #1C1C1C;
-            text-decoration: none;
-            border-radius: 14px;
-            transition: transform 0.5s ease, box-shadow 0.3s ease;
-            box-shadow: 0px 0px 10px #b700ff;
-        }
-
-        .button:hover {
-            background-color: #b700ff;
-            color: #FFFFFF;
-            transform: translateY(-2px);
-            box-shadow: 0px 8px 25px #b700ff;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-10px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes gradientBackground {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes blink {
-            50% { opacity: 0.5; }
-        }
-
         .dot-green, .dot-orange, .dot-blue {
             width: 12px;
             height: 12px;
@@ -114,23 +64,20 @@
             animation: blink 1s infinite alternate;
         }
 
-        .dot-green {
-            background-color: #00FF00;
-        }
-
-        .dot-orange {
-            background-color: #FFA500;
-        }
-
-        .dot-blue {
-            background-color: #0000FF;
-        }
+        .dot-green { background-color: #00FF00; }
+        .dot-orange { background-color: #FFA500; }
+        .dot-blue { background-color: #0000FF; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="title">Karmaservices Loaders</h1>
-
+        
+        <h2>STATUS DES LOADER :</h2>
+        <p><span class="dot-green"></span> = 100% Fonctionnel</p>
+        <p><span class="dot-orange"></span> = Update en cours</p>
+        <p><span class="dot-blue"></span> = Indispensable avant lancement</p>
+        
         <div class="category">
             <h2>BO6 - Warzone ⤵</h2>
             <div class="button-container">
@@ -142,39 +89,6 @@
                 <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/SHADOW_CLEANER.exe" class="button"><span class="dot-green"></span>BO6 - SHADOW-CLEANER</a>
                 <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/BOT_LOBBY_KARMA.exe" class="button"><span class="dot-green"></span>BO6 - XP BOT LOBBY LOGICIEL</a>
                 <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/KARMA-FIX.exe" class="button"><span class="dot-blue"></span>BO6 - KarmaFIX (CHECK INSTALLATION)</a>
-            </div>
-</html>
-
-        </div>
-
-        <div class="category">
-            <h2>FORTNITE ⤵</h2>
-            <div class="button-container">
-                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/FN-EXTERNAL.exe" class="button"><span class="dot-green"></span>Fortnite - EXTERNAL CHAIR</a>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>VALORANT ⤵</h2>
-            <div class="button-container">
-                <a href="https://raw.githubusercontent.com/avod245/1070439473491488880_cloud/main/VALO-EXT.exe" class="button"><span class="dot-green"></span>VALORANT - EXTERNAL CHAIR</a>
-            </div>
-        </div>
-
-         <div class="category">
-            <h2>FIVEM ⤵</h2>
-            <div class="button-container">
-                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/FIVEM_EXTERNAL_CHAIR.exe" class="button"><span class="dot-orange"></span>FIVEM - EXTERNAL CHAIR</a>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>AUTRES ⤵</h2>
-            <div class="button-container">
-                <a href="" class="button"><span class="dot-orange"></span>PC OPTIMIZER V1</a>
-                <a href="" class="button"><span class="dot-orange"></span>HWID PERM WOOFER</a>
-                <p class="click-me">Ca ne s'ouvre pas? <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.403-windows-x86-installer" class="click-me">APPUIE ICI</a></p>
-                <p class="click-me">Rejoins KarmaServices sur Discord !  <a href="https://discord.com/invite/KarmaServices" class="click-me">APPUIE ICI</a></p>
             </div>
         </div>
     </div>
