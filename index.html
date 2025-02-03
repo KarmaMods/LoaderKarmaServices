@@ -57,6 +57,56 @@
             margin-top: 30px;
         }
 
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #b700ff;
+            color: white;
+            background-color: #1C1C1C;
+            text-decoration: none;
+            border-radius: 14px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 0px 10px #b700ff;
+        }
+
+        .button:hover {
+            background-color: #b700ff;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 25px #b700ff;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.5; }
+        }
+
         .dot-green, .dot-orange, .dot-blue {
             width: 12px;
             height: 12px;
@@ -64,20 +114,32 @@
             animation: blink 1s infinite alternate;
         }
 
-        .dot-green { background-color: #00FF00; }
-        .dot-orange { background-color: #FFA500; }
-        .dot-blue { background-color: #0000FF; }
+        .dot-green {
+            background-color: #00FF00;
+        }
+
+        .dot-orange {
+            background-color: #FFA500;
+        }
+
+        .dot-blue {
+            background-color: #0000FF;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="title">Karmaservices Loaders</h1>
-        
-        <h2>STATUS DES LOADER :</h2>
-        <p><span class="dot-green"></span> = 100% Fonctionnel</p>
-        <p><span class="dot-orange"></span> = Update en cours</p>
-        <p><span class="dot-blue"></span> = Indispensable avant lancement</p>
-        
+
+        <div class="category">
+            <h2>STATUS DES LOADERS:</h2>
+            <div class="button-container">
+                <p><span class="dot-green"></span> = 100% Fonctionnel</p>
+                <p><span class="dot-orange"></span> = Update en cours</p>
+                <p><span class="dot-blue"></span> = Indispensable avant lancement</p>
+            </div>
+        </div>
+
         <div class="category">
             <h2>BO6 - Warzone ⤵</h2>
             <div class="button-container">
