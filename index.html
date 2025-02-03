@@ -141,12 +141,12 @@
             align-items: center; /* Centrer la colonne entière */
         }
 
-        /* Ajouter un carré bleu avec bords arrondis autour des éléments de status */
+        /* Ajouter un carré avec bordure bleue foncée et un effet brillant */
         .status-box {
             background-color: #003366; /* Bleue foncée */
             border-radius: 14px;
             padding: 6px 15px; /* Réduit l'espace au-dessus de STATUS DES LOADERS */
-            border: 2px solid #b700ff;
+            border: 2px solid #003366; /* Bordure bleue foncée */
             display: inline-flex;
             flex-direction: column;
             gap: 8px; /* Réduit l'espacement interne */
@@ -154,7 +154,7 @@
             margin-top: 20px; /* Ajoute un petit espace au-dessus du carré */
             margin-bottom: 20px;
             box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.2); /* Ajout d'un effet lumineux subtil */
-            animation: glow 1.5s ease-in-out infinite alternate; /* Effet de brillance */
+            animation: glow 1.5s ease-in-out infinite alternate; /* Effet de brillance sur la bordure */
         }
 
         .status-box p {
@@ -169,7 +169,7 @@
             color: #b700ff;
         }
 
-        /* Effet de brillance sur le carré */
+        /* Effet de brillance sur la bordure du carré */
         @keyframes glow {
             0% {
                 box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.2);
