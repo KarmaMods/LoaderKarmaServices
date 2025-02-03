@@ -131,6 +131,14 @@
             display: flex;
             align-items: center;
             gap: 10px; /* Espacement entre le point et le texte */
+            justify-content: center; /* Centrer les éléments */
+            margin-bottom: 10px; /* Espacement entre les items */
+        }
+
+        .status-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrer la colonne entière */
         }
     </style>
 </head>
@@ -140,7 +148,7 @@
 
         <div class="category">
             <h2>STATUS DES LOADERS:</h2>
-            <div class="button-container">
+            <div class="status-container">
                 <!-- Alignement correct avec flexbox pour les points avant le texte -->
                 <div class="status-item">
                     <span class="dot-green"></span>
