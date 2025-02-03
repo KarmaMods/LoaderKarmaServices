@@ -39,19 +39,6 @@
             display: inline-block;
         }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 60%; }
-        }
-
-        @keyframes blink-caret {
-            50% { border-color: transparent; }
-        }
-
-        h1.typing-complete {
-            border-right: none;
-        }
-
         h2 {
             font-size: 2rem;
             margin-top: 30px;
@@ -199,17 +186,44 @@
             margin-top: 0; /* Retirer l'espace au-dessus du titre */
         }
 
+        /* Alignement de Karmaservices et LOADERS sur deux lignes */
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 3rem;
+            color: #b700ff;
+            border-right: 0.15em solid #b700ff;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .title span {
+            display: block; /* Met le mot "LOADERS" à la ligne */
+            font-size: 2.5rem;
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 id="title">Karmaservices Loaders</h1>
+        <div class="title-container">
+            <h1 class="title">
+                Karmaservices
+                <span>LOADERS</span>
+            </h1>
+        </div>
 
         <div class="category">
             <div class="status-box">
-                <!-- Titre ajouté dans le carré bleu -->
                 <h2>STATUS DES LOADERS:</h2>
-                <!-- Alignement correct avec flexbox pour les points avant le texte -->
                 <div class="status-item">
                     <span class="dot-green"></span>
                     <p>= 100% Fonctionnel</p>
@@ -225,7 +239,6 @@
             </div>
         </div>
 
-        <!-- Autres catégories et boutons -->
         <div class="category">
             <h2>BO6 - Warzone ⤵</h2>
             <div class="button-container">
